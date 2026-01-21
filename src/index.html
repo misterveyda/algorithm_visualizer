@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algorithm Visualizer</title>
+</head>
+<body>
+    <h1>Algorithm Visualizer</h1>
+    <button onclick="runSort()">Run Bubble Sort</button>
+    <div id="output"></div>
+
+    <script type="module">
+        import { bubbleSort } from './algorithms/sorting.js';
+
+        function runSort() {
+            const steps = bubbleSort([5, 3, 1, 4, 2]);
+            document.getElementById("output").innerText =
+                JSON.stringify(steps, null, 2);
+        }
+        window.runSort = runSort;
+    </script>
+</body>
+</html>
